@@ -1,9 +1,20 @@
 # Pricing-Report-Automation
-This is an automated supplier comparison and margin optimization script that transforms raw pricing data into actionable business intelligence.
+This is an automated supplier-comparison and margin-optimization script that transforms raw pricing data into actionable business intelligence.
 
-In the competitive retail and wholesale environments, pricing decisions directly impact profitability. Manual comparison of supplier costs, shipping fees, and retail prices across hundreds of SKUs is time-intensive, error-prone, and unscalable. This is an intelligent automation engine that processes multi-supplier pricing data, calculates true landed costs, identifies optimal suppliers per SKU, and flags products requiring price adjustments — all in seconds.
+# 📊 Project Overview
+In retail and e-commerce, sourcing costs are often scattered across multiple vendor spreadsheets, with inconsistent naming conventions and hidden fees (such as shipping). This project automates the ingestion, normalization, and analysis of these sources to identify the most profitable sourcing options and flag products requiring immediate price adjustments.
 
-# 🔧 Technical Architecture
+# 🛠️ Technical Implementation
+
+The pipeline is engineered for data integrity and scalability, moving away from "flat-file" merging to a robust Logic Engine approach.
+
+> Schema Mapping & Normalization: Programmatically resolves disparate column headers (e.g., ItemID vs SKU) into a unified key for relational joins.
+
+> Landed Cost Calculation: Isolates specific vendor overheads (Shipping Fees) to ensure an "apples-to-apples" comparison between raw wholesale costs and landed costs.
+
+> High-Precision Formatting: Implements a strict 0.00% decimal mask in the final export to prevent rounding bias in marginal profitability analysis.
+
+> XlsxWriter Engine: Bypasses standard CSV limitations by applying cell-level formatting, freeze panes, and conditional logic directly within the Python script.
 
 
 <img width="1047" height="300" alt="image" src="https://github.com/user-attachments/assets/d2c6615a-ff9b-476b-9287-079dfdd07e85" />
@@ -17,52 +28,37 @@ numpy>=1.20.0       # Numerical operations
 
 xlsxwriter>=3.0.0   # Advanced Excel formatting
 
-# 🚀 Getting Started
 
-1. Prerequisites
+# 📈 Business Impact
 
-> Python 3.8+ installed (or Google Colab account - recommended)
+This tool replaces hours of manual VLOOKUP tasks with a single-click audit of an entire inventory.
 
-> Input Files in Excel format
+> Optimal Sourcing Selection: Automatically identifies the lowest-cost provider between multiple suppliers, directly impacting the bottom line.
 
+> Risk Mitigation: The "Action Status" engine uses conditional formatting to instantly flag "at-risk" products where margins have slipped below the 20% threshold.
 
-2. Installation
+> Executive Readability: Uses data bars and color-coded alerts to allow stakeholders to perform a 10-second "visual audit" of inventory health.
 
-> Open the Colab notebook
-
-> Click Runtime → Run all
-
-> Upload your Excel files when prompted
-
-> Download the generated report
+> Scalable Foundation: Built as a modular engine, the script can be expanded to include AI-driven price forecasting or real-time API price scraping.
 
 
-# 🎓 Use Cases
+# 📂 System Architecture
 
+The code follows a 4-stage pipeline:
 
-1. Regular Pricing Reviews
+> Ingestion: Loading fragmented .xlsx dataframes.
 
-Scenario: Monthly pricing audits for 800-SKU catalog
+> Logic Engine: Executing cost comparisons and margin calculations.
 
-Outcome: Systematic margin protection vs. ad-hoc reactions
+> Formatting: Defining strict currency and percentage masks.
 
+> Reporting: Generating a polished, client-ready Executive Dashboard.
 
-2. Supplier Negotiation Prep
+# 🚀 How to Use
 
-Scenario: Annual contract renewal with Supplier A
+> Open the Google Colab Notebook.
 
-Outcome: Data-backed negotiating position
+> Ensure your vendor files follow the standardized headers or update the Schema Mapping section.
 
+> Run all cells to generate Pricing_Analysis_Report.xlsx.
 
-3. New Product Onboarding
-
-Scenario: Evaluating 50 new SKUs for catalog addition
-
-Outcome: Prevent adding unprofitable products
-
-
-5. Market Price Change Response
-
-Scenario: Competitor drops prices on 20 core products
-
-Outcome: Rapid competitive response capability
