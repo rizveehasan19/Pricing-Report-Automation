@@ -1,4 +1,4 @@
-## Pricing-Report-Automation
+# Pricing-Report-Automation
 This is an automated supplier comparison and margin optimization script that transforms raw pricing data into actionable business intelligence.
 
 In the competitive retail and wholesale environments, pricing decisions directly impact profitability. Manual comparison of supplier costs, shipping fees, and retail prices across hundreds of SKUs is time-intensive, error-prone, and unscalable. This is an intelligent automation engine that processes multi-supplier pricing data, calculates true landed costs, identifies optimal suppliers per SKU, and flags products requiring price adjustments — all in seconds.
