@@ -3,7 +3,7 @@ This is an automated supplier comparison and margin optimization script that tra
 
 In the competitive retail and wholesale environments, pricing decisions directly impact profitability. Manual comparison of supplier costs, shipping fees, and retail prices across hundreds of SKUs is time-intensive, error-prone, and unscalable. This is an intelligent automation engine that processes multi-supplier pricing data, calculates true landed costs, identifies optimal suppliers per SKU, and flags products requiring price adjustments — all in seconds.
 
-# 🔧 Technical Architecture
+🔧 Technical Architecture
 
 
 <img width="1047" height="300" alt="image" src="https://github.com/user-attachments/assets/d2c6615a-ff9b-476b-9287-079dfdd07e85" />
