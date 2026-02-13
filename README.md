@@ -5,13 +5,9 @@ In the competitive retail and wholesale environments, pricing decisions directly
 
 # 🔧 Technical Architecture
 
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  Data Ingestion │────▶│  Logic Engine    │────▶│  Export Module  │
-│  (Excel Upload) │     │  (Cost Analysis) │     │  (Formatted XLS)│
-└─────────────────┘     └──────────────────┘     └─────────────────┘
-         │                       │                         │
-    Excel Files          Pandas DataFrames          XlsxWriter Output
-    (3 sources)          (Merge/Calculate)          (Conditional Format)
+
+<img width="1047" height="300" alt="image" src="https://github.com/user-attachments/assets/d2c6615a-ff9b-476b-9287-079dfdd07e85" />
+
 
 # Core Dependencies:
 pandas>=1.3.0       # Data manipulation and analysis
